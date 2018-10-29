@@ -8,22 +8,13 @@ var app = express();
 // --> 11)  Mount the body-parser middleware  here
 
 
-/** 1) Meet the node console. */
-// This prints a simple on the homepage
+/** 3) Serve an HTML file */
 app.get('/', function (req, res) {
-   // console.log("Hello World");
-   // res.send('Hello Express');
    res.sendFile( __dirname + '/views/index.html' );
 })
 
-/** 2) A first working Express Server */
-
-
-/** 3) Serve an HTML file */
-
-
 /** 4) Serve static assets  */
-
+app.use( express.static('public') );
 
 /** 5) serve JSON on a specific route */
 
