@@ -9,10 +9,10 @@ var app = express();
 
 
 /** 1) Meet the node console. */
-// This responds with "Hello World" on the homepage
+// This prints a simple on the homepage
 app.get('/', function (req, res) {
-   console.log("Hello World");
-   res.send('Hello World');
+   // console.log("Hello World");
+   res.send('Hello Express');
 })
 
 /** 2) A first working Express Server */
