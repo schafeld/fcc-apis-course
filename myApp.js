@@ -12,7 +12,8 @@ var app = express();
 // This prints a simple on the homepage
 app.get('/', function (req, res) {
    // console.log("Hello World");
-   res.send('Hello Express');
+   // res.send('Hello Express');
+   res.sendFile( __dirname + '/views/index.html' );
 })
 
 /** 2) A first working Express Server */
