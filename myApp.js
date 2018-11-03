@@ -52,6 +52,8 @@ app.get('/:word/echo', function(req, res, next) {
 // /name?first=<firstname>&last=<lastname>
 app.get('/name', function(req, res, next) {
   res.json({'name': req.query.first + ' ' + req.query.last});
+}).post('/name', function(req, res, next) {
+  res.json({'name': req.body.first + ' ' + req.body.last});
 })
   
 /** 11) Get ready for POST Requests - the `body-parser` */
@@ -59,7 +61,7 @@ app.get('/name', function(req, res, next) {
 
 
 /** 12) Get data form POST  */
-
+// Method chained above under step 10
 
 
 // This would be part of the basic setup of an Express app
